@@ -1,0 +1,9 @@
+body, section {			/* Change width and height to own preferences */
+	width: 500px;
+	height: 400px;
+	overflow-x: hidden;
+}
+
+/* Basic style tweaks */
+section { padding: 5px;}
+.navbar { margin-bottom: 2px; }
