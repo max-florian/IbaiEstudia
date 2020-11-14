@@ -1,9 +1,15 @@
 body, section {			/* Change width and height to own preferences */
-	width: 500px;
-	height: 400px;
+	width: 250px;
+	height: 150px;
 	overflow-x: hidden;
+	background-color: #333;
 }
 
 /* Basic style tweaks */
 section { padding: 5px;}
 .navbar { margin-bottom: 2px; }
+
+/* Footer */
+.footercool {
+	color: rgba(255, 255, 255, .5);
+  }
