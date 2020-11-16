@@ -14,6 +14,17 @@ section { padding: 5px;}
 	text-align: center;
 }
 
+/* Imagenes Ibai */
+.ibaleft {
+	text-align: right;
+	margin-right: 0;
+	padding-right: 0;
+}
+.ibairight {
+	text-align: left;
+	
+}
+
 /* Footer */
 .footercool {
 	color: rgba(255, 255, 255, .5);
@@ -22,7 +33,6 @@ section { padding: 5px;}
 	color: rgba(255, 255, 255, .5);
 	font-size: 12px;
 }
-
 .col.twlogo {
 	text-align: right;
 }
@@ -30,7 +40,7 @@ section { padding: 5px;}
 /* Toogle */
 .toggle {
 	align-self: center;
-	margin-top: 5%;
+	margin-top: 3%;
 }
 
 /* The switch - the box around the slider */

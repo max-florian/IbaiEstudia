@@ -1,9 +1,12 @@
 {
     "manifest_version": 2,
-    "name": "My Cool Extension",
+    "name": "Ibai te Ayuda a Estudiar",
     "version": "0.1",
+    "description": "Build an Extension!",
+    "permissions": ["storage"],
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["background.js"],
+      "persistent": false
     },
     "content_scripts": [
       {
@@ -14,7 +17,7 @@
       }
     ],
     "browser_action": {
-        "default_icon": "images/icon.png",
+        "default_icon": "images/ibai.png",
         "default_popup": "popup.html"
     }
   }
