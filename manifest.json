@@ -4,10 +4,6 @@
     "version": "0.1",
     "description": "Build an Extension!",
     "permissions": ["storage"],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
     "content_scripts": [
       {
         "matches": [
