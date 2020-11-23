@@ -17,7 +17,7 @@
           "https://www.reddit.com/*",
           "https://www.tiktok.com/*"
         ],
-        "run_at": "document_start",
+        "run_at": "document_end",
         "js": ["content.js"]
       }
     ],
