@@ -3,7 +3,7 @@
     "name": "Ibai te Ayuda a Estudiar",
     "version": "0.1",
     "description": "Build an Extension!",
-    "permissions": ["storage"],
+    "permissions": ["storage","activeTab"],
     "web_accessible_resources": [
       "images/quemirasamigo.mp4"
     ],

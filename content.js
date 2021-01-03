@@ -12,13 +12,9 @@ function reproducirVideo(){
                                 <title>A estudiar crack!</title>
                             </head>
                             <body>
-                                <video id="ibaivideo" width="100%" height="auto" controls>
+                                <video id="ibaivideo" width="100%" height="auto" controls autoplay loop>
                                     <source src="${videoURL}" type="video/mp4">
                                 </video>
-                                <script> 
-                                    document.body.addEventListener('mouseover',function() { document.getElementById('ibaivideo').play(); },false);
-                                      
-                                </script>
                             </body>
                         </html>`
     
