@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "Ibai te Ayuda a Estudiar",
-    "version": "0.1",
-    "description": "Build an Extension!",
+    "version": "1.0",
+    "description": "¡Extensión que te ayuda a concentrarte en lo que estas estudiando, evitando todo tipo de distracciones!",
     "permissions": ["storage","tabs"],
     "web_accessible_resources": [
       "images/quemirasamigo.mp4"

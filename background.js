@@ -17,19 +17,27 @@ function coincidencia(sitio){
 }
 
 chrome.tabs.onActivated.addListener( function(activeInfo){
-    chrome.tabs.get(activeInfo.tabId, function(tab){
-        y = coincidencia(tab.url);
-        if(y){
-            chrome.tabs.update({ url: "chrome://bookmarks" })
+    chrome.storage.sync.get('modoestudio', function(data) {
+        if(data.modoestudio){
+            chrome.tabs.get(activeInfo.tabId, function(tab){
+                y = coincidencia(tab.url);
+                if(y){
+                    chrome.tabs.update({ url: "chrome://bookmarks" })
+                }
+            });
         }
     });
 });
 
 chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
-    if (tab.active && change.url) {
-        y = coincidencia(change.url);
-        if(y){
-            chrome.tabs.update({ url: "chrome://bookmarks" })
-        }           
-    }
+    chrome.storage.sync.get('modoestudio', function(data) {
+        if(data.modoestudio){
+            if (tab.active && change.url) {
+                y = coincidencia(change.url);
+                if(y){
+                    chrome.tabs.update({ url: "chrome://bookmarks" })
+                }           
+            }
+        }
+    });
 });
