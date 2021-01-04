@@ -23,3 +23,4 @@ btnModo.onchange = function(){
     });
     
 };
+

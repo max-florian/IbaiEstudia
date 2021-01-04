@@ -3,26 +3,18 @@
     "name": "Ibai te Ayuda a Estudiar",
     "version": "0.1",
     "description": "Build an Extension!",
-    "permissions": ["storage","activeTab"],
+    "permissions": ["storage","tabs"],
     "web_accessible_resources": [
       "images/quemirasamigo.mp4"
-    ],
-    "content_scripts": [
-      {
-        "matches": [
-          "https://www.facebook.com/*",
-          "https://www.instagram.com/*",
-          "https://twitter.com/*",
-          "https://www.youtube.com/*",
-          "https://www.reddit.com/*",
-          "https://www.tiktok.com/*"
-        ],
-        "run_at": "document_end",
-        "js": ["content.js"]
-      }
     ],
     "browser_action": {
         "default_icon": "images/ibai.png",
         "default_popup": "popup.html"
+    },
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "chrome_url_overrides": {
+        "bookmarks": "video.html"
     }
   }
