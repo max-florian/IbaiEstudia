@@ -11,6 +11,12 @@
         "default_icon": "images/ibai.png",
         "default_popup": "popup.html"
     },
+    "icons": {
+      "16": "images/ibai_icon16.png",
+      "32": "images/ibai_icon32.png",
+      "48": "images/ibai_icon48.png",
+      "128": "images/ibai_icon128.png"
+    },
     "background": {
       "scripts": ["background.js"]
     },
