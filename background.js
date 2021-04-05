@@ -6,6 +6,7 @@ sitiosbloqueados = [
     new RegExp('https:\/\/www\.reddit\.com\/.*'),
     new RegExp('https:\/\/www\.tiktok\.com\/.*'),
     new RegExp('https:\/\/www\.twitch.com\/.*'),
+    new RegEXP('https://osu.ppy.sh/home\/.*'),
     new RegEXP('https://osu.ppy.sh/beatmapsets\/.*'),
     new RegEXP('https://www.netflix.com/es/\/.*'),
     new RegEXP('https://www.netflix.com\/.*')
