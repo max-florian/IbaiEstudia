@@ -1,4 +1,5 @@
-let imgTwitter = document.getElementById('imgTwitter');
+let imgLinkedin = document.getElementById('imgLinkedin');
+let imgTwitch = document.getElementById('imgTwitch');
 let aSourceCode = document.getElementById('aSourceCode');
 let btnModo = document.getElementById("btnModo");
 
@@ -7,12 +8,16 @@ chrome.storage.sync.get('modoestudio', function(data) {
     btnModo.checked = data.modoestudio;
 });
 
-imgTwitter.onclick = function() {
-    chrome.tabs.create({url: 'https://twitter.com/Max7Droid', active: false});
+imgLinkedin.onclick = function() {
+    chrome.tabs.create({url: 'https://www.linkedin.com/in/max-florian', active: false});
+};
+
+imgTwitch.onclick = function() {
+    chrome.tabs.create({url: 'https://www.twitch.tv/k7droid', active: false});
 };
 
 aSourceCode.onclick = function() {
-    chrome.tabs.create({url: 'https://github.com/K7Droid/IbaiEstudia', active: false});
+    chrome.tabs.create({url: 'https://github.com/max-florian/IbaiEstudia', active: false});
 };
 
 //Funcion para almacenar en memoria el valor/estado del modoEstudio
