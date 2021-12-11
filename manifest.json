@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Ibai te Ayuda a Estudiar",
-    "version": "1.1",
+    "version": "2.0.0",
     "description": "¡Extensión que te ayuda a concentrarte en lo que estas estudiando, evitando todo tipo de distracciones!",
     "permissions": ["storage","tabs"],
     "web_accessible_resources": [

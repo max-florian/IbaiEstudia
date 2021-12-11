@@ -1,3 +1,4 @@
+let imgSettings = document.getElementById('imgSettings');
 let imgLinkedin = document.getElementById('imgLinkedin');
 let imgTwitch = document.getElementById('imgTwitch');
 let aSourceCode = document.getElementById('aSourceCode');
@@ -7,6 +8,10 @@ let btnModo = document.getElementById("btnModo");
 chrome.storage.sync.get('modoestudio', function(data) {
     btnModo.checked = data.modoestudio;
 });
+
+imgSettings.onclick = function() {
+    chrome.tabs.create({url: './manage_pages.html', active: false});
+};
 
 imgLinkedin.onclick = function() {
     chrome.tabs.create({url: 'https://www.linkedin.com/in/max-florian', active: false});

@@ -1,0 +1,26 @@
+body,
+section {
+  background-color: #333333;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: aliceblue;
+}
+
+label {
+  color: aliceblue;
+}
+
+.pagesform {
+  margin-top: 40px;
+}
+
+.tablediv {
+  margin-top: 50px;
+}
+
+.pagestable {
+  background-color: aliceblue;
+}
