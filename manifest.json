@@ -9,7 +9,7 @@
     ],
     "browser_action": {
         "default_icon": "images/ibai.png",
-        "default_popup": "popup.html"
+        "default_popup": "html/popup.html"
     },
     "icons": {
       "16": "images/ibai_icon16.png",
@@ -18,9 +18,9 @@
       "128": "images/ibai_icon128.png"
     },
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["js/background.js"]
     },
     "chrome_url_overrides": {
-        "bookmarks": "video.html"
+        "bookmarks": "html/video.html"
     }
   }

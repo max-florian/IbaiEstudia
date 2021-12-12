@@ -10,7 +10,7 @@ chrome.storage.sync.get('modoestudio', function(data) {
 });
 
 imgSettings.onclick = function() {
-    chrome.tabs.create({url: './manage_pages.html', active: false});
+    chrome.tabs.create({url: 'html/manage_pages.html', active: false});
 };
 
 imgLinkedin.onclick = function() {
