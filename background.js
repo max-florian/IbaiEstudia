@@ -1,26 +1,33 @@
-sitiosbloqueados = [
-    new RegExp('https:\/\/www\.facebook\.com\/.*'),
-    new RegExp('https:\/\/www\.instagram\.com\/.*'),
-    new RegExp('https:\/\/twitter\.com\/.*'),
-    new RegExp('https:\/\/www\.youtube\.com\/.*'),
-    new RegExp('https:\/\/www\.reddit\.com\/.*'),
-    new RegExp('https:\/\/www\.tiktok\.com\/.*'),
-    new RegExp('https:\/\/www\.twitch.com\/.*')
-];
-function coincidencia(sitio){
-    for(var i=0;i<sitiosbloqueados.length;i++){
-        if(sitiosbloqueados[i].test(sitio)){
-            return true
+function coincidencia(sitio,sitios){
+    for(let i=0;i<sitios.length;i++){
+        let regularexp = new RegExp(sitios[i]);
+        if(regularexp.test(sitio)){
+            return true;
         }
     }
-    return false
+    return false;
+
 }
 
+chrome.runtime.onInstalled.addListener( function(){
+    let sitiosdefault = [
+        'https:\/\/www\.facebook\.com\/.*',
+        'https:\/\/www\.instagram\.com\/.*',
+        'https:\/\/twitter\.com\/.*',
+        'https:\/\/www\.youtube\.com\/.*',
+        'https:\/\/www\.tiktok\.com\/.*',
+        'https:\/\/www\.twitch.tv\/.*'
+
+    ];
+    chrome.storage.sync.set({'sitiosbloqueados': sitiosdefault}, function() {
+    });
+});
+
 chrome.tabs.onActivated.addListener( function(activeInfo){
-    chrome.storage.sync.get('modoestudio', function(data) {
+    chrome.storage.sync.get(['modoestudio','sitiosbloqueados'], function(data) {
         if(data.modoestudio){
             chrome.tabs.get(activeInfo.tabId, function(tab){
-                y = coincidencia(tab.url);
+                y = coincidencia(tab.url,data.sitiosbloqueados);
                 if(y){
                     chrome.tabs.update({ url: "chrome://bookmarks" })
                 }
@@ -30,10 +37,10 @@ chrome.tabs.onActivated.addListener( function(activeInfo){
 });
 
 chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
-    chrome.storage.sync.get('modoestudio', function(data) {
+    chrome.storage.sync.get(['modoestudio','sitiosbloqueados'], function(data) {
         if(data.modoestudio){
             if (tab.active && change.url) {
-                y = coincidencia(change.url);
+                y = coincidencia(change.url,data.sitiosbloqueados);
                 if(y){
                     chrome.tabs.update({ url: "chrome://bookmarks" })
                 }           
