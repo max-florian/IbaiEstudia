@@ -1,6 +1,6 @@
 function coincidencia(sitio,sitios){
     for(let i=0;i<sitios.length;i++){
-        let regularexp = new RegExp(sitios[i]);
+        let regularexp = new RegExp(sitios[i]+".*");
         if(regularexp.test(sitio)){
             return true;
         }
@@ -11,12 +11,12 @@ function coincidencia(sitio,sitios){
 
 chrome.runtime.onInstalled.addListener( function(){
     let sitiosdefault = [
-        'https:\/\/www\.facebook\.com\/.*',
-        'https:\/\/www\.instagram\.com\/.*',
-        'https:\/\/twitter\.com\/.*',
-        'https:\/\/www\.youtube\.com\/.*',
-        'https:\/\/www\.tiktok\.com\/.*',
-        'https:\/\/www\.twitch.tv\/.*'
+        'https:\/\/www\.facebook\.com\/',
+        'https:\/\/www\.instagram\.com\/',
+        'https:\/\/twitter\.com\/',
+        'https:\/\/www\.youtube\.com\/',
+        'https:\/\/www\.tiktok\.com\/',
+        'https:\/\/www\.twitch.tv\/'
 
     ];
     chrome.storage.sync.set({'sitiosbloqueados': sitiosdefault}, function() {
