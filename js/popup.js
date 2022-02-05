@@ -30,7 +30,6 @@ btnModo.onchange = function(){
     var activo = btnModo.checked;
     chrome.storage.sync.set({'modoestudio': activo}, function() {
         console.log("Modo Estudio: "+activo);
-    });
-    
+    });  
 };
 
