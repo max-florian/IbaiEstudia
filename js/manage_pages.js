@@ -11,14 +11,18 @@ chrome.storage.sync.get('sitiosbloqueados', function(data) {
         cont++;
         let row = table.insertRow();
         let numero = row.insertCell(0);
+        numero.style.verticalAlign='middle';
         numero.innerHTML = cont;
         let url = row.insertCell(1);
+        url.style.verticalAlign='middle';
         url.innerHTML = item;
         let video = row.insertCell(2);
+        video.style.verticalAlign='middle';
         video.innerHTML = 'Ibai 1';
         let accion = row.insertCell(3);
-        accion.innerHTML = '<a name="btnGuardar" style="visibility:hidden;" class="btn btn-success" ><i class="bi bi-check-lg"></i></a> <a name="btnModificar" class="btn btn-outline-secondary"><i class="bi bi-wrench-adjustable"></i></a> <a name="btnEliminar" class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i></a>'
-        //console.log(accion.childNodes);
+        accion.style.verticalAlign='middle';
+        accion.innerHTML = '<button name="btnGuardar" style="display:none;" class="btn btn-success" ><i class="bi bi-check-lg"></i></button> <button name="btnModificar" class="btn btn-outline-secondary"><i class="bi bi-wrench-adjustable"></i></button> <button name="btnEliminar" class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i></button>'
+
         // OnClick event del boton de modificar:
         accion.childNodes[2].onclick = function(){
             modificar(accion.parentNode.rowIndex-1);
@@ -35,7 +39,6 @@ chrome.storage.sync.get('sitiosbloqueados', function(data) {
             const input_video = url.childNodes[0].value;
             guardar(input_video,accion.parentNode.rowIndex-1);
         }
-
         
     });
 
@@ -62,8 +65,8 @@ function modificar(indice){
     const videourl= videocell.innerHTML;
     videocell.innerHTML='<input type="text" id="inputvideo" value='+videourl+'>';
 
-    btnModificar.style.visibility='hidden';
-    btnGuardar.style.visibility='visible';
+    btnModificar.style.display='none';
+    btnGuardar.style.display='inline-block';
 }
 
 function guardar(videourl,indice){
