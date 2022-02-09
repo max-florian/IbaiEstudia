@@ -21,7 +21,7 @@ chrome.runtime.onInstalled.addListener( function(){
     ];
     chrome.storage.sync.set({'sitiosbloqueados': sitiosdefault}, function() {
     });
-    alert("Empezar a usar la extensión: \n- Activa el modo estudio \n\nAdministrar los sitios bloqueados: \n- Presiona el icono de ajustes");
+    alert("Empezar a usar la extensión: \n- Activa el modo estudio. \n\nAdministrar los sitios bloqueados: \n- Presiona el icono de ajustes.\n\n**IMPORTANTE**\nDependiendo del navegador que utilices es posible que debas reiniciar el navegador luego de agregar una nueva página web para guardar los cambios.");
 });
 
 chrome.tabs.onActivated.addListener( function(activeInfo){
