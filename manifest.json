@@ -1,23 +1,26 @@
 {
-    "manifest_version": 2,
-    "name": "Ibai te Ayuda a Estudiar",
-    "version": "2.0.0",
-    "description": "¡Extensión que te ayuda a concentrarte en lo que estas estudiando, evitando todo tipo de distracciones!",
-    "permissions": ["storage","tabs"],
-    "web_accessible_resources": [
-      "images/quemirasamigo.mp4"
-    ],
-    "browser_action": {
-        "default_icon": "images/ibai.png",
-        "default_popup": "html/popup.html"
-    },
-    "icons": {
-      "16": "images/ibai_icon16.png",
-      "32": "images/ibai_icon32.png",
-      "48": "images/ibai_icon48.png",
-      "128": "images/ibai_icon128.png"
-    },
-    "background": {
-      "scripts": ["js/background.js"]
+  "manifest_version": 3,
+  "name": "Ibai te Ayuda a Estudiar",
+  "version": "2.5.0",
+  "description": "¡Extensión que te ayuda a concentrarte en lo que estas estudiando, evitando todo tipo de distracciones!",
+  "permissions": ["storage", "tabs", "notifications"],
+  "action": {
+    "default_icon": "images/ibai.png",
+    "default_popup": "html/popup.html"
+  },
+  "icons": {
+    "16": "images/ibai_icon16.png",
+    "32": "images/ibai_icon32.png",
+    "48": "images/ibai_icon48.png",
+    "128": "images/ibai_icon128.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/quemirasamigo.mp4"],
+      "matches": ["<all_urls>"]
     }
-  }
+  ]
+}
